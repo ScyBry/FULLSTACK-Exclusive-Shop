@@ -1,0 +1,45 @@
+.container
+	padding: 16px 0
+	border-bottom: 2px solid #c6c6c6
+
+.header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	max-width: 1170px
+	margin: 0 auto
+
+.header__logo
+	font-family: Inter
+	font-size: 24px
+	font-weight: 700
+	line-height: 24px
+	letter-spacing: 0.72px
+
+.header__links
+	display: flex
+	align-items: center
+	gap: 48px
+
+.link
+	font-family: Poppins
+	fonst-size: 16px
+	font-weight: 400
+	line-height: 24px
+	position: relative
+
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		transform: scaleX(0)
+		height: 2px
+		bottom: 0
+		left: 0
+		background-color: #000
+		transform-origin: bottom right
+		transition: transform 0.25s ease-out
+
+	&:hover::after
+		transform: scaleX(1)
+		transform-origin: bottom left
